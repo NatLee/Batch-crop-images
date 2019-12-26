@@ -36,7 +36,8 @@ def drawRectangle(event, x, y, flags, param):
 if __name__ == '__main__':
     
     opt = Options()
-    imgs = [img for img in opt.input_path.glob('./*.*[jpg,png,gif]')]
+    exts = ['.jpg', '.png', '.jpeg']
+    imgs = [p for p in opt.input_path.rglob('*') if p.suffix in exts]
     rawImg = cv2.imread(imgs[0].absolute().as_posix())
     img = rawImg.copy()
     cv2.namedWindow('Crop Window')
