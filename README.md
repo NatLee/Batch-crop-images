@@ -6,7 +6,6 @@ A tool for cropping images in a batch with an interface.
 
 - numpy
 - opencv-python
-- tqdm
 
 ## Usage
 
@@ -14,15 +13,20 @@ A tool for cropping images in a batch with an interface.
 python main.py --input_path <YOUR_INPUT_DIR> --output_path <YOUR_OUTPUT_DIR>
 ```
 
+And, it'll preview first one for cropping.
+
 ## Example
 
 * Test images which need to be cropped
 
-![Demo input 1](./img/input/img01.png)
+- 1280 x 720
+![Demo input 1](./img/input/1.jpg)
 
-![Demo input 2](./img/input/img02.png)
+- 1280 x 720
+![Demo input 2](./img/input/2.jpg)
 
-![Demo input 3](./img/input/img03.png)
+- 1280 x 852
+![Demo input 3](./img/input/3.jpg)
 
 * Processing with mouse
 
@@ -30,8 +34,13 @@ python main.py --input_path <YOUR_INPUT_DIR> --output_path <YOUR_OUTPUT_DIR>
 
 * Cropped result
 
-![Demo result 1](./img/result/img01.png)
+![Demo result 1](./img/result/1.jpg)
 
-![Demo result 2](./img/result/img02.png)
+![Demo result 2](./img/result/2.jpg)
 
-![Demo result 3](./img/result/img03.png)
+![Demo result 3](./img/result/3.jpg)
+
+
+# Reference
+
+All test images are from [Free-Photos](https://pixabay.com/users/free-photos-242387).

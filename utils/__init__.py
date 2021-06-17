@@ -1,2 +1,4 @@
 
-from .options import Options
+from .option import Option
+
+from .cropper import Cropper
