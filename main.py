@@ -30,9 +30,10 @@ if __name__ == '__main__':
             if last_size and last_size != size:
 
                 print('[Notice]')
-                print(f'Detect size of {img_path} is {size}.')
-                print(f'And, size of most images is {last_size}.')
-                print('It\'ll be resized for cropping. Would you want to continue? [y/n]')
+                print(f'Detect size of {img_path} is {size}. It\'s not compatible with first one {last_size}.')
+                print('This image will be resized for cropping(original image WON\'T been modified).')
+                print('Would you want to continue? [y/n]')
+
                 while True:
                     yn = input().lower()
                     if yn in ['y', 'n', 'yes', 'no']:
