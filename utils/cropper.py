@@ -30,6 +30,9 @@ class Cropper:
 
         self.cropped = False
 
+        print('[Processing]')
+        print('----------------------------------------')
+
         self.get_range_for_cropping()
 
     def get_start_end(self):
@@ -72,7 +75,7 @@ class Cropper:
             self.end = (x, y)
             print(f'End (x, y) = {self.end}')
             self.cropped = True
-
+            print('----------------------------------------')
 
     def get_range_for_cropping(self):
 
