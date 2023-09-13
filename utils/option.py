@@ -18,7 +18,7 @@ class Option():
         self.input_path = Path(self.__opt.input_path)
         self.output_path = Path(self.__opt.output_path)
 
-        print('[Input Argments]')
+        print('[Input Arguments]')
         print('----------------------------------------')
         print(f'Input folder path: {self.input_path.absolute().as_posix()}')
         print(f'Output folder path: {self.output_path.absolute().as_posix()}')
@@ -37,6 +37,7 @@ class Option():
         if not path.is_dir():
             print('[ERROR]')
             print('----------------------------------------')
+            print('It seems that your input folder path is not correct.')
             print(f'Cannot find this folder `{path}`!')
             exit(-1)
 

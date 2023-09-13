@@ -4,6 +4,10 @@ A tool for cropping images in a batch with an interface.
 
 ## Requirement
 
+```bash
+pip install -r requirements.txt
+```
+
 - numpy
 - opencv-python
 
