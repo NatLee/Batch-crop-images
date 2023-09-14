@@ -4,13 +4,14 @@ from utils import Option, Cropper
 
 if __name__ == '__main__':
 
+    # Load config
     opt = Option()
     img_paths = opt.img_paths
 
-    # pick first one
+    # Pick first one
     raw_img = cv2.imread(opt.get_first_one().absolute().as_posix())
     
-    # choose how to crop
+    # Choose how to crop
     cropper = Cropper(raw_img)
 
     if cropper.cropped:
@@ -22,7 +23,7 @@ if __name__ == '__main__':
 
         last_size = None
 
-        # list all images to crop
+        # List all images to crop
         for img_path in img_paths:
 
             img = cv2.imread(img_path.absolute().as_posix())
@@ -53,6 +54,6 @@ if __name__ == '__main__':
             else:
                 last_size = size
 
-            # cropping other images
+            # Cropping other images
             cropped_img = img[starty:endy, startx:endx, :]
             cv2.imwrite((opt.output_path / img_path.name).absolute().as_posix(), cropped_img)
