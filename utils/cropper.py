@@ -1,23 +1,21 @@
-
 from tkinter import Tk
-
 import numpy as np
-
 import cv2
-
 
 class Cropper:
 
     def __init__(self, img) -> None:
 
-        self.ratio = 0.7
-
-        self.screen_width, self.screen_height = self.get_screen_info()
         self.img = img
+        self.screen_width, self.screen_height = self.get_screen_info()
 
         height, width, _ = self.img.shape
+        width_scale = width / self.screen_width
+        height_scale = height / self.screen_height
 
-        if width / self.screen_width > self.ratio or height / self.screen_height > self.ratio:
+        # check if image is too large, we need to resize it
+        if width_scale > 1 or height_scale > 1:
+            self.ratio = 1 / max(width_scale, height_scale)
             self.img = cv2.resize(self.img, None, fx=self.ratio, fy=self.ratio)
         else:
             self.ratio = 1.0
